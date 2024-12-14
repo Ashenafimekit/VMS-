@@ -17,7 +17,7 @@ const Table = () => {
   useEffect(() => {
     const fetchVehicles = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/vehicle/get");
+        const response = await axios.get(`${backendURL}/vehicle/get`);
         setGetVehicles(response.data.vehicle);
         //console.log("incoming vehicles : ", getVehicles);
       } catch (error) {
@@ -33,7 +33,7 @@ const Table = () => {
     //console.log("Deleted vehicle : ", data);
     try {
       await axios
-        .delete(`http://localhost:3000/vehicle/delete/${data._id}`)
+        .delete(`${backendURL}/vehicle/delete/${data._id}`)
         .then((res) => {
           if (res.data.status) {
             setGetVehicles((prevVehicles) =>
@@ -133,7 +133,7 @@ const Table = () => {
       e.preventDefault();
       try {
         await axios
-          .put(`http://localhost:3000/vehicle/update/${row._id}`, editVehicle)
+          .put(`${backendURL}/vehicle/update/${row._id}`, editVehicle)
           .then((res) => {
             const updatedVehicle = res.data.vehicle;
             console.log("edited vehicle : ",editVehicle)

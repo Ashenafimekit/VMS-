@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 
 const AddVehicle = () => {
   const [addVehicle, setAddVehicle] = useState({
@@ -23,7 +25,7 @@ const AddVehicle = () => {
     console.log("submitted Vehicle : ", addVehicle);
     try {
       await axios
-        .post("http://localhost:3000/vehicle/add", addVehicle)
+        .post(`${backendURL}/vehicle/add`, addVehicle)
         .then((res) => {
           if (res.data.status === true) {
             setSuccess("Successfully submitted!");
