@@ -3,5 +3,5 @@ const app = require("./app");
 //config.port
 
 app.listen(process.env.PORT, () => {
-  console.log(`Server running on port https://localhost:${config.port}`);
+  console.log(`Server running on port https://localhost:${process.env.PORT}`);
 });
