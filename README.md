@@ -22,35 +22,78 @@ A simple, interactive vehicle management dashboard built with React.js for the f
 - Node.js (version 14 or above)
 - MongoDB (or MongoDB Atlas for cloud database)
 
+Certainly! Since you've pushed the `frontend` and `backend` in different branches, the installation setup will need to reflect that. Here's how you can update the installation instructions to guide users through cloning the repository and checking out the respective branches for frontend and backend.
+
+### Updated Setup Instructions:
+
+---
+
+## Setup Instructions
+
+### Prerequisites
+
+- Node.js (version 14 or above)
+- MongoDB (or MongoDB Atlas for cloud database)
+
 ### Installation
 
-1. Clone the repository:
+1. **Clone the repository**:
+   Clone the repository to your local machine.
+
+   ```bash
    git clone https://github.com/Ashenafimekit/VMS-.git
-
-2. Install backend dependencies:
-   cd backend
-   npm install
-
-3. Install frontend dependencies:
-   cd frontend
-   npm install
-
-4. Set up your MongoDB database. If you're using MongoDB Atlas, create a cluster and get your connection string. Update the connection string in `backend/config/db.js`.
-
-5. Start the backend server:
-
-   ```bash
-   cd backend
-   npm start
    ```
 
-6. Start the frontend server:
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+2. **Set up the backend**:
+   - Navigate to the backend branch:
 
-Now, open your browser and navigate to `http://localhost:5173` to view the dashboard.
+     ```bash
+     git checkout backend
+     ```
+
+   - Install the backend dependencies:
+
+     ```bash
+     cd backend
+     npm install
+     ```
+
+   - Set up your MongoDB database. If you're using MongoDB Atlas, create a cluster and get your connection string. Update the connection string in `backend/config/db.js`.
+
+   - Start the backend server:
+
+     ```bash
+     npm start
+     ```
+
+3. **Set up the frontend**:
+   - Navigate to the frontend branch:
+
+     ```bash
+     git checkout frontend
+     ```
+
+   - Install the frontend dependencies:
+
+     ```bash
+     cd frontend
+     npm install
+     ```
+
+   - Start the frontend server:
+
+     ```bash
+     npm run dev
+     ```
+
+4. **Open the dashboard**:
+   Now, open your browser and navigate to `http://localhost:5173` to view the vehicle management dashboard.
+
+---
+
+### Summary of Steps:
+- Clone the repository and check out the appropriate branches for frontend and backend (`git checkout frontend` and `git checkout backend`).
+- Install dependencies for both frontend and backend, then run them.
 
 ## Usage
 
