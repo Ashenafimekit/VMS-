@@ -8,6 +8,8 @@ import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import DisabledByDefaultIcon from '@mui/icons-material/DisabledByDefault';
+const backendURL = import.meta.env.VITE_BACKEND_URL;
+
 
 const Table = () => {
   const [getVehicles, setGetVehicles] = useState([]);
